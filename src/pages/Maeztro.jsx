@@ -7,20 +7,12 @@ import {
   ClipboardList,
   CreditCard,
   FileText,
-  Menu,
   ShieldCheck,
   Sparkles,
   Users,
-  X,
 } from "lucide-react";
-
-const navLinks = [
-  { label: "Dores", href: "#dores" },
-  { label: "Benefícios", href: "#beneficios" },
-  { label: "Como funciona", href: "#como-funciona" },
-  { label: "Planos", href: "#planos" },
-  { label: "FAQ", href: "#faq" },
-];
+import Header from "../components/Header.jsx";
+import Footer from "../components/Footer.jsx";
 
 const benefits = [
   {
@@ -72,85 +64,6 @@ const faqs = [
   ],
 ];
 
-function ProductHeader() {
-  const [open, setOpen] = useState(false);
-
-  return (
-    <header className="sticky top-0 z-50 border-b border-[#dbe5f0] bg-white/90 backdrop-blur-xl">
-      <div className="mx-auto flex h-[72px] max-w-[1180px] items-center justify-between px-5 lg:px-8">
-        <a
-          href="/maeztro"
-          className="flex items-center gap-3"
-          aria-label="MAEZTRO Gestão - início"
-        >
-          <img
-            src="/assets/maeztro.png"
-            alt="MAEZTRO Gestão"
-            className="h-10 w-10 rounded-xl object-cover"
-          />
-          <span className="text-[15px] font-bold tracking-[-0.02em] text-[#193252]">
-            MAEZTRO <span className="font-medium text-[#5e7898]">Gestão</span>
-          </span>
-        </a>
-        <nav
-          className="hidden items-center gap-7 text-sm font-medium text-[#607895] md:flex"
-          aria-label="Navegação do produto"
-        >
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="transition-colors hover:text-[#1765a3]"
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
-        <a
-          href="https://app-maeztro.gestfors.com.br/teste-gratuito"
-          target="_blank"
-          rel="noreferrer"
-          className="hidden h-10 items-center rounded-lg bg-[#12639e] px-4 text-sm font-semibold text-white shadow-[0_5px_15px_rgba(18,99,158,0.22)] transition hover:bg-[#0c5389] md:flex"
-        >
-          Teste gratuito
-        </a>
-        <button
-          type="button"
-          className="rounded-lg border border-[#dbe5f0] p-2 text-[#386286] md:hidden"
-          onClick={() => setOpen(!open)}
-          aria-label={open ? "Fechar menu" : "Abrir menu"}
-          aria-expanded={open}
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
-      </div>
-      {open && (
-        <nav className="border-t border-[#dbe5f0] bg-white px-5 py-4 md:hidden">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className="block py-2 text-sm text-[#607895]"
-            >
-              {link.label}
-            </a>
-          ))}
-          <a
-            href="https://app-maeztro.gestfors.com.br/teste-gratuito"
-            target="_blank"
-            rel="noreferrer"
-            onClick={() => setOpen(false)}
-            className="mt-2 block rounded-lg bg-[#12639e] px-4 py-3 text-center text-sm font-semibold text-white"
-          >
-            Teste gratuito
-          </a>
-        </nav>
-      )}
-    </header>
-  );
-}
-
 function SectionLabel({ children }) {
   return (
     <p className="text-xs font-bold tracking-[0.15em] text-[#1672aa]">
@@ -164,7 +77,7 @@ function Maeztro() {
 
   return (
     <div className="min-h-screen bg-[#f7fafc] font-sans text-[#193252]">
-      <ProductHeader />
+      <Header />
       <main>
         <section
           id="inicio"
@@ -578,32 +491,7 @@ function Maeztro() {
           </div>
         </section>
       </main>
-      <footer className="border-t border-[#d9e5ed] bg-white px-5 py-8 text-sm text-[#71869a]">
-        <div className="mx-auto flex max-w-[1060px] flex-col items-center justify-between gap-4 sm:flex-row">
-          <a
-            href="#inicio"
-            className="flex items-center gap-2 font-semibold text-[#244766]"
-          >
-            <img
-              src="/assets/maeztro.png"
-              alt="MAEZTRO"
-              className="h-8 w-8 rounded-lg object-cover"
-            />
-            MAEZTRO Gestão
-          </a>
-          <p>
-            © 2026 GestFors - Soluções digitais. Todos os direitos reservados.
-          </p>
-          <div className="flex gap-4">
-            <a href="/privacidade" className="hover:text-[#1672aa]">
-              Privacidade
-            </a>
-            <a href="/termos" className="hover:text-[#1672aa]">
-              Termos de Uso
-            </a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

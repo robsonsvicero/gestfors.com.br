@@ -8,10 +8,10 @@ const navigationLinks = [
 ]
 
 const productLinks = [
-  { label: 'MAEZTRO Gestão', status: 'ATIVO', tone: 'emerald' },
-  { label: 'AgendaVitta', status: 'EM BREVE', tone: 'violet' },
-  { label: 'Saúde Digital', status: 'BUILD', tone: 'slate' },
-  { label: 'Micro-SaaS para MEIs', status: 'BUILD', tone: 'slate' },
+  { label: 'MAEZTRO Gestão', href: '/maeztro', status: 'ATIVO', tone: 'emerald' },
+  { label: 'AgendaVitta', href: '/#section3', status: 'EM BREVE', tone: 'violet' },
+  { label: 'Saúde Digital', href: '/#section3', status: 'BUILD', tone: 'slate' },
+  { label: 'Micro-SaaS para MEIs', href: '/#section3', status: 'BUILD', tone: 'slate' },
 ]
 
 function ProductStatus({ status, tone }) {
@@ -51,7 +51,7 @@ export default function Footer() {
           <nav aria-label="Produtos e soluções">
             <h3 className="font-mono text-[11px] font-bold tracking-[0.09em] text-[#bdc9e8]">PRODUTOS &amp; SOLUÇÕES</h3>
             <ul className="mt-5 space-y-4 text-sm">
-              {productLinks.map((product) => <li key={product.label} className="flex items-center gap-2"><a href="/#section3" className="transition-colors hover:text-white">{product.label}</a><ProductStatus status={product.status} tone={product.tone} /></li>)}
+              {productLinks.map((product) => <li key={product.label} className="flex items-center gap-2"><a href={product.href} className="transition-colors hover:text-white">{product.label}</a><ProductStatus status={product.status} tone={product.tone} /></li>)}
             </ul>
           </nav>
 
