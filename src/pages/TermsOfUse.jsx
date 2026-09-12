@@ -1,0 +1,21 @@
+import { ArrowLeft, FileText } from 'lucide-react'
+import Footer from '../components/Footer.jsx'
+import Header from '../components/Header.jsx'
+
+const sections = [
+  ['1. Aceitação dos termos', 'Ao acessar o site ou utilizar qualquer produto da GestFors, você declara que leu e concorda com estes Termos de Uso. Caso não concorde com alguma condição, não utilize os serviços.'],
+  ['2. Nossos serviços', 'A GestFors cria e disponibiliza produtos digitais, micro-SaaS e conteúdos relacionados a tecnologia e gestão. Cada produto pode possuir regras, funcionalidades e condições específicas, apresentadas em seus próprios ambientes.'],
+  ['3. Uso permitido', 'Você deve utilizar o site e os produtos de forma lícita, responsável e compatível com sua finalidade. É proibido tentar obter acesso não autorizado, interferir na operação, introduzir código malicioso, explorar vulnerabilidades ou utilizar os serviços para violar direitos de terceiros.'],
+  ['4. Propriedade intelectual', 'Marcas, nomes, interfaces, textos, códigos, elementos visuais e demais materiais da GestFors são protegidos pela legislação aplicável. O uso dos serviços não transfere qualquer direito de propriedade intelectual, salvo autorização expressa.'],
+  ['5. Contas e informações', 'Quando um produto exigir cadastro, você se compromete a fornecer informações verdadeiras e manter suas credenciais protegidas. Atividades realizadas por meio da sua conta são de sua responsabilidade, salvo evidência de uso indevido comunicado à GestFors.'],
+  ['6. Disponibilidade e atualizações', 'Trabalhamos para manter os serviços disponíveis e seguros, mas funcionalidades podem ser alteradas, suspensas ou descontinuadas para manutenção, evolução técnica ou motivos de segurança. Faremos esforços razoáveis para comunicar mudanças relevantes.'],
+  ['7. Limitação de responsabilidade', 'Na extensão permitida pela lei, a GestFors não se responsabiliza por indisponibilidades causadas por fatores fora de seu controle, integrações de terceiros, falhas de conectividade ou uso dos produtos em desacordo com suas instruções.'],
+  ['8. Privacidade e contato', 'O tratamento de dados pessoais é descrito em nossa Política de Privacidade. Para dúvidas sobre estes Termos, sugestões ou comunicações formais, entre em contato pelo e-mail contato@gestfors.com.br.'],
+  ['9. Alterações destes termos', 'Estes Termos podem ser atualizados para refletir mudanças nos serviços ou na legislação. A versão vigente será publicada nesta página, com a respectiva data de atualização.'],
+]
+
+export default function TermsOfUse() {
+  return (
+    <div className="min-h-screen bg-[#070a14] text-[#eef1fb]"><Header /><main className="relative overflow-hidden px-8 pb-24 pt-16 sm:pt-24"><div className="pointer-events-none absolute left-1/2 top-0 h-[360px] w-[620px] -translate-x-1/2 rounded-full bg-[#7b2ff7]/10 blur-[110px]" /><div className="relative mx-auto max-w-[900px]"><a href="/" className="inline-flex items-center gap-2 text-sm text-[#9aa8c1] transition-colors hover:text-white"><ArrowLeft className="h-4 w-4" />Voltar para o início</a><div className="mt-10 border-b border-white/[0.1] pb-10"><div className="inline-flex items-center gap-2 rounded-full border border-[#3d2b68] bg-[#17132f] px-4 py-2 text-[10px] font-semibold tracking-[0.11em] text-[#c0b1ec]"><FileText className="h-3.5 w-3.5 text-[#913cff]" />GOVERNANÇA &amp; TERMOS</div><h1 className="mt-6 text-4xl font-bold tracking-[-0.035em] text-[#eef1ff] sm:text-5xl">Termos de Uso</h1><p className="mt-5 max-w-2xl text-base leading-relaxed text-[#9aa8c1]">Regras claras para o uso do site e dos produtos digitais da GestFors.</p><p className="mt-4 font-mono text-xs text-[#64728c]">Última atualização: 11 de setembro de 2026</p></div><div className="mt-10 space-y-8">{sections.map(([title, content]) => <section key={title}><h2 className="text-xl font-semibold text-[#eef1ff]">{title}</h2><p className="mt-3 text-[15px] leading-[1.75] text-[#a1aec5]">{content}</p></section>)}</div><div className="mt-12 rounded-xl border border-[#4c238c] bg-[#17132f] p-5 text-sm leading-relaxed text-[#b9afd2]">Ao continuar utilizando nossos serviços, você confirma que compreendeu e aceita estes Termos de Uso.</div></div></main><Footer /></div>
+  )
+}
