@@ -276,11 +276,11 @@ export default function App() {
               </ul>
             </div>
 
-            <div className="pt-6">
+            {/* <div className="pt-6">
               <span className="text-xs font-semibold text-[#3b9dff] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
                 Conhecer módulo <ChevronRight className="w-3.5 h-3.5" />
               </span>
-            </div>
+            </div> */}
           </div>
 
           {/* Card 2: GestFors Financeiro */}
@@ -312,11 +312,11 @@ export default function App() {
               </ul>
             </div>
 
-            <div className="pt-6">
+            {/* <div className="pt-6">
               <span className="text-xs font-semibold text-[#d2bbff] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
                 Solicitar acesso antecipado <ChevronRight className="w-3.5 h-3.5" />
               </span>
-            </div>
+            </div> */}
           </div>
 
           {/* Card 3: Hub de Integrações & APIs */}
@@ -348,11 +348,11 @@ export default function App() {
               </ul>
             </div>
 
-            <div className="pt-6">
+            {/* <div className="pt-6">
               <span className="text-xs font-semibold text-[#3b9dff] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
                 Ver roadmap técnico <ChevronRight className="w-3.5 h-3.5" />
               </span>
-            </div>
+            </div> */}
           </div>
 
         </div>
@@ -465,7 +465,7 @@ export default function App() {
                 Falar com a GestFors
               </a>
               <a 
-                href="https://wa.me/5511999999999" 
+                href="https://wa.me/5511964932007" 
                 target="_blank" 
                 rel="noreferrer"
                 className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-white/[0.05] hover:bg-white/[0.1] border border-white/[0.1] text-white font-semibold text-base transition-all duration-200"
