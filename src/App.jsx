@@ -8,7 +8,6 @@ import {
   CheckCircle2, 
   Clock, 
   ExternalLink,
-  ChevronRight,
 } from 'lucide-react';
 import Header from './components/Header.jsx';
 import Hero from './components/Hero.jsx';

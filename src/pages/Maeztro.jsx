@@ -64,7 +64,7 @@ const faqs = [
   ],
   [
     "O sistema emite notas fiscais e recibos?",
-    "O produto organiza recibos, comprovantes e relatórios da sua operação. A disponibilidade de cada documento pode depender do plano e da configuração utilizada.",
+    "O MAEZTRO emite recibos e comprovantes de pagamento para sua organização. No momento, o sistema não emite notas fiscais.",
   ],
   [
     "Como funciona o atendimento?",
