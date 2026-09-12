@@ -7,6 +7,7 @@ import {
   ClipboardList,
   CreditCard,
   FileText,
+  MessageCircle,
   ShieldCheck,
   Sparkles,
   Users,
@@ -163,23 +164,28 @@ function Maeztro() {
                   "Mensagens perdidas no WhatsApp",
                   "O aluno desmarca em cima da hora e você não lembra qual horário estava livre.",
                   "Falta de agenda centralizada",
+                  MessageCircle,
                 ],
                 [
                   "Constrangimento na cobrança",
                   "Sem um controle claro de vencimentos, você esquece quem pagou e quanto vai receber.",
                   "Inadimplência invisível",
+                  CreditCard,
                 ],
                 [
                   "Planilhas manuais que ninguém preenche",
                   "Atualizar planilhas pelo celular entre uma aula e outra é uma tarefa que nunca termina.",
                   "Zero previsibilidade financeira",
+                  ClipboardList,
                 ],
-              ].map(([title, text, tag]) => (
+              ].map(([title, text, tag, Icon]) => (
                 <article
                   key={title}
                   className="rounded-xl border border-[#dce7f0] bg-white p-6 shadow-[0_8px_24px_rgba(39,82,119,0.05)]"
                 >
-                  <div className="mb-5 h-9 w-9 rounded-lg bg-[#e9f4fb]" />
+                  <div className="mb-5 flex h-9 w-9 items-center justify-center rounded-lg bg-[#e9f4fb] text-[#1672aa]">
+                    <Icon className="h-4 w-4" />
+                  </div>
                   <h3 className="text-lg font-bold text-[#244766]">{title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-[#72869b]">
                     {text}
